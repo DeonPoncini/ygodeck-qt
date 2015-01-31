@@ -188,7 +188,7 @@ void DeckBuilder::onExport()
     if (filename.empty()) {
         return;
     }
-    auto serial = ygo::data::fromCardMap(deckSet.cards());
+    auto serial = deckSet.exportCards();
     std::ofstream out(filename);
     out << serial;
     out.close();
